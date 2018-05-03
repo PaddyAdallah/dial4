@@ -1,1 +1,1 @@
-web: gunicorn dial4.wsgi:dial4 --log-file -
+web: gunicorn dial4.wsgi --log-file -
