@@ -5,3 +5,4 @@ djangorestframework==3.8.2
 gunicorn
 cloudinary==1.11.0
 django-cloudinary-storage
+psycopg2==2.7.4
