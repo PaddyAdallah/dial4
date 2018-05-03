@@ -1,1 +1,1 @@
-web: gunicorn dial4.wsgi:dial4 --log-file - --timeout 300
+web: gunicorn dial4.wsgi:dial4 --log-file -
