@@ -1,4 +1,4 @@
-python_version==3.6.5
+python==3.6.5
 Django==1.11.12
 whitenoise
 dj_database_url
