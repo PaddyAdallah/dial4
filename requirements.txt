@@ -1,7 +1,6 @@
 Django==1.11.12
 whitenoise
 dj_database_url
-djangorestframework==3.8.2
 gunicorn
 cloudinary==1.11.0
 django-cloudinary-storage

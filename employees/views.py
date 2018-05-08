@@ -1,26 +1,53 @@
-from rest_framework import viewsets
+from django.shortcuts import render
+
 from .models import EmployeeDetails
-from .serializers import PostSerializer
-
-from django.shortcuts import render_to_response
 
 
-class PostViewSet(viewsets.ModelViewSet):
-    queryset = EmployeeDetails.objects.all()
-    serializer_class = PostSerializer
+def index_view(request):
+    details = EmployeeDetails.objects.all()
+
+    context = {
+        "details": details,
+    }
+
+    return render(request, "Employees/index.html", context)
 
 
-def index(request):
-    return render_to_response('index.html')
+def about_view(request):
+    details = EmployeeDetails.objects.all()
+
+    context = {
+        "details": details,
+    }
+
+    return render(request, "Employees/about.html",context)
 
 
-def about(request):
-    return render_to_response('about.html')
+def gallery_view(request):
+    details = EmployeeDetails.objects.all()
+
+    context = {
+        "details": details,
+    }
+
+    return render(request, "Employees/gallery.html", context)
 
 
-def gallery(request):
-    return render_to_response('gallery.html')
+def contact_view(request):
+    details = EmployeeDetails.objects.all()
+
+    context = {
+        "details": details,
+    }
+
+    return render(request, "Employees/contact.html", context)
 
 
-def contact(request):
-    return render_to_response('contact.html')
+def employee_view(request):
+    details = EmployeeDetails.objects.all()
+
+    context = {
+        "details": details,
+    }
+
+    return render(request, "Employees/profiles.html", context)

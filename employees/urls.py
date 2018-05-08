@@ -1,21 +1,19 @@
-from django.conf.urls import url, include
-from rest_framework import routers
-# from employees.views import PostViewSet
-from django.conf.urls.static import static
+from django.conf.urls import url
+from . import views
 from django.conf import settings
+from django.conf.urls.static import static
 
-from .views import *
-
-router = routers.DefaultRouter()
-router.register(r'', PostViewSet)
+app_name = 'employees'
 
 urlpatterns = [
-    url(r'^employees/', include(router.urls)),
-    url('', index, name='home'),
-    url('about/', about, name='about'),
-    url('gallery/', gallery, name='gallery'),
-    url('contact/', contact, name='contact'),
+    url(r'^$', views.index_view, name='home'),
+    url(r'^about/', views.about_view, name='about'),
+    url(r'^gallery/', views.gallery_view, name='gallery'),
+    url(r'^contacts/', views.contact_view, name='contacts'),
+    url(r'^employees/', views.employee_view, name='employees'),
 ]
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+

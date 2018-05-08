@@ -1,0 +1,33 @@
+{% extends 'Employees/base_layout.html' %}
+{% load staticfiles %}
+{% load cloudinary %}
+
+{% block content %}
+
+    <!-- banner -->
+	<div class="banner1">
+		<div class="container">
+            {% include 'Employees/navbar.html' %}
+		</div>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Profiles</li>
+          </ol>
+        </nav>
+	</div>
+    <div>
+        <ul>
+            {% for detail in details %}
+                <li>{{ detail.emp_name }}</li>
+                <li>{{ detail.emp_title }}</li>
+                <li>{{ detail.emp_bio }}</li>
+                {% cloudinary detail.emp_image.name  width=50 height=50%}
+            {% endfor %}
+        </ul>
+    </div>
+<!-- //banner -->
+
+
+
+{% endblock %}
