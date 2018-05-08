@@ -4,7 +4,7 @@ from rest_framework import serializers
 
 class PostSerializer(serializers.HyperlinkedModelSerializer):
 
-    emp_image = serializers.ImageField(max_length=None,use_url=True)
+    emp_image = serializers.ImageField(max_length=None, use_url=True)
 
     class Meta:
         model = EmployeeDetails

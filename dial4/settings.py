@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'cloudinary_storage',
     'cloudinary',
+    # 'employees.apps.EmployeesConfig',
+    # 'django.contrib.EmployeesConfig',
 ]
 
 MIDDLEWARE = [
@@ -47,7 +49,7 @@ ROOT_URLCONF = 'dial4.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': ['employees/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [

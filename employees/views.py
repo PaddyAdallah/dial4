@@ -24,3 +24,7 @@ def gallery(request):
 
 def contact(request):
     return render_to_response('contact.html')
+
+
+def profile(request):
+    return render_to_response('profiles.html')

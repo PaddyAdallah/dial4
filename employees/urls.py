@@ -1,6 +1,5 @@
 from django.conf.urls import url, include
 from rest_framework import routers
-# from employees.views import PostViewSet
 from django.conf.urls.static import static
 from django.conf import settings
 
@@ -11,10 +10,11 @@ router.register(r'', PostViewSet)
 
 urlpatterns = [
     url(r'^employees/', include(router.urls)),
-    url('', index, name='home'),
-    url('about/', about, name='about'),
-    url('gallery/', gallery, name='gallery'),
-    url('contact/', contact, name='contact'),
+    url(r'^home/', index, name='home'),
+    url(r'^about/', about, name='about'),
+    url(r'^gallery/', gallery, name='gallery'),
+    url(r'^contact/', contact, name='contact'),
+    url(r'^/profile/', profile, name='profile')
 ]
 
 if settings.DEBUG:
