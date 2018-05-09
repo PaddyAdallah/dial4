@@ -20,7 +20,7 @@
         <div id="profiles">
             {% for detail in details %}
             <div class="card col-md-4">
-                <img class="card-img-top" src={% cloudinary detail.emp_image.name  width=50 height=50%} alt="avatar of
+                <img class="card-img-top" src="{% cloudinary detail.emp_image.name  width=50 height=50%}" alt="avatar of
 {{ detail.emp_name }}" />
                 <div class="card-body">
                     <h5 class="card-title">
