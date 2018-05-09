@@ -16,15 +16,22 @@
           </ol>
         </nav>
 	</div>
-    <div>
-        <ul>
+    <div class="container row">
+        <div id="profiles">
             {% for detail in details %}
-                <li>{{ detail.emp_name }}</li>
-                <li>{{ detail.emp_title }}</li>
-                <li>{{ detail.emp_bio }}</li>
-                {% cloudinary detail.emp_image.name  width=50 height=50%}
+            <div class="card col-md-4">
+                <img class="card-img-top" src={% cloudinary detail.emp_image.name  width=50 height=50%} alt="avatar of
+{{ detail.emp_name }}" />
+                <div class="card-body">
+                    <h5 class="card-title">
+                        {{ detail.emp_name }} <br/>
+                        {{ detail.emp_title }}
+                    </h5>
+                    <p class="card-text">{{ detail.emp_bio }}</p>
+                </div>
+            </div>
             {% endfor %}
-        </ul>
+        </div>
     </div>
 <!-- //banner -->
 
