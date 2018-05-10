@@ -12,7 +12,7 @@
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active" aria-current="page">Profiles</li>
+            <li class="breadcrumb-item active" aria-current="page">Staff</li>
           </ol>
         </nav>
 	</div>
@@ -20,9 +20,10 @@
         <div id="profiles">
             {% for detail in details %}
             <div class="card col-md-4">
-                <img class="card-img-top" src="{% cloudinary detail.emp_image.name  width=50 height=50%}" alt="avatar of
-{{ detail.emp_name }}" />
-                <div class="card-body">
+                <div class="text-center">
+                    <p>{% cloudinary detail.emp_image.name  width=50 height=50 %}</p>
+                </div>
+                <div class="card-body text-center">
                     <h5 class="card-title">
                         {{ detail.emp_name }} <br/>
                         {{ detail.emp_title }}
