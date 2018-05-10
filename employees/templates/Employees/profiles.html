@@ -21,14 +21,14 @@
             {% for detail in details %}
             <div class="card col-md-4">
                 <div class="text-center">
-                    <p>{% cloudinary detail.emp_image.name  width=50 height=50 %}</p>
+                    <p>{% cloudinary detail.emp_image.name  width=200 height=200 %}</p>
                 </div>
                 <div class="card-body">
                     <h5 class="card-title">
-                        <p>Name</p>{{ detail.emp_name }} <br/>
-                        <p>Title</p>{{ detail.emp_title }}
+                        <p><span>Name:  </span>{{ detail.emp_name }}</p>
+                        <p><span>Title: </span>{{ detail.emp_title }}</p>
                     </h5>
-                    <p class="card-text">{{ detail.emp_bio }}</p>
+                    <p class="card-text"><span>Bio:</span> <br/>{{ detail.emp_bio }}</p>
                 </div>
             </div>
             {% endfor %}
