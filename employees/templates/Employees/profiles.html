@@ -23,10 +23,10 @@
                 <div class="text-center">
                     <p>{% cloudinary detail.emp_image.name  width=50 height=50 %}</p>
                 </div>
-                <div class="card-body text-center">
+                <div class="card-body">
                     <h5 class="card-title">
-                        {{ detail.emp_name }} <br/>
-                        {{ detail.emp_title }}
+                        <p>Name</p>{{ detail.emp_name }} <br/>
+                        <p>Title</p>{{ detail.emp_title }}
                     </h5>
                     <p class="card-text">{{ detail.emp_bio }}</p>
                 </div>

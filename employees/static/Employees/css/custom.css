@@ -91,5 +91,7 @@ img{
 }
 
 /* profiles */
-
+.card-title p{
+    font-weight: bold;
+}
 
